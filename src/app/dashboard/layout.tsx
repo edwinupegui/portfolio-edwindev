@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 
-import LeftPage from './left/page'
+import LeftPage from '../components/organisms/left/page'
+import ViewPage from '../components/organisms/View/page'
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -15,7 +16,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <div className="flex flex-col gap-4 md:mt-5 md:flex-row">
             <LeftPage />
             {children}
-            {/* <View /> */}
+            <ViewPage />
           </div>
         </div>
       </body>

@@ -31,7 +31,9 @@ export default function Home() {
           </Link>
 
           <span>
-            <PiGithubLogoLight className="text-4xl" />
+            <Link target="_blank" href="https://github.com/edwinupegui">
+              <PiGithubLogoLight className="text-4xl" />
+            </Link>
           </span>
         </div>
       </div>

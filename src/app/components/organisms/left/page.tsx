@@ -3,14 +3,7 @@ import React, { useState } from 'react'
 import Link from 'next/link'
 
 import { motion, useAnimation } from 'framer-motion'
-import {
-  PiBookOpenTextLight,
-  PiGoogleLogoThin,
-  PiHouseLight,
-  PiMagicWandThin,
-  PiShapesThin,
-  PiTwitterLogoLight,
-} from 'react-icons/pi'
+import { PiBookOpenTextLight, PiGoogleLogoThin, PiHouseLight, PiMagicWandThin, PiShapesThin } from 'react-icons/pi'
 import { SiAdobe } from 'react-icons/si'
 const LeftPage = () => {
   const [open, setOpen] = useState(false)
@@ -21,18 +14,18 @@ const LeftPage = () => {
 
   return (
     <motion.div
-      initial={{ y: 10, opacity: 0 }}
+      initial={{ y: 20, opacity: 0 }}
       animate={{
         y: 0,
         opacity: 1,
-        transition: { duration: 0.3, type: 'spring', stiffness: 200 },
+        transition: { duration: 0.6, type: 'spring', stiffness: 200 },
       }}
-      className="sticky top-5 hidden h-fit w-full rounded-2xl bg-[#1C1C1C] md:block md:w-80"
+      className="sticky top-5 mb-10 hidden h-fit w-full rounded-2xl bg-[#1C1C1C] md:block md:w-80"
     >
       <div className="h-full w-full rounded-2xl border border-neutral-800 bg-[#1C1C1C] p-3 md:w-80">
         <div className="flex">
           <div className="relative w-full">
-            <img className="h-28 w-28 rounded-full object-cover" src="/edwin-icon-full.png" alt="" />
+            <img className="h-28 w-28 rounded-full object-cover" src="/edwin-icon-full-mini.png" alt="" />
             <div
               onMouseEnter={() => setOpen(true)}
               onMouseLeave={() => setOpen(false)}
@@ -52,25 +45,22 @@ const LeftPage = () => {
                 {skills.map((skill, key) => (
                   <p
                     key={key}
-                    className="flex h-5 items-center justify-center rounded-md bg-[#282828] px-2 text-[11px] font-bold text-neutral-300"
+                    className="flex h-5 shrink-0 items-center justify-center rounded-md bg-[#282828] px-2 text-[11px] font-bold text-neutral-300"
                   >
                     {skill}
                   </p>
                 ))}
               </div>
             </div>
-
-            <div>
-              <div className="flex h-fit w-full gap-x-1">
-                <Link href={'/'}>
-                  <div className="flex h-7 w-7 items-center justify-center rounded-full bg-neutral-700/50">
-                    <PiHouseLight className="text-neutral-100" />
-                  </div>
-                </Link>
-                <div className="flex h-7 w-7 items-center justify-center rounded-full bg-neutral-700/50">
-                  <PiBookOpenTextLight className="text-neutral-100" />
-                </div>
+          </div>
+          <div className="flex h-fit w-full gap-x-1">
+            <Link href={'/'}>
+              <div className="flex h-7 w-7 items-center justify-center rounded-full bg-neutral-700/50">
+                <PiHouseLight className="text-neutral-100" />
               </div>
+            </Link>
+            <div className="flex h-7 w-7 items-center justify-center rounded-full bg-neutral-700/50">
+              <PiBookOpenTextLight className="text-neutral-100" />
             </div>
           </div>
         </div>
@@ -117,6 +107,17 @@ const LeftPage = () => {
                   <p className="text-[9px]">Google</p>
                 </div>
               </div>
+              <small className="text-[9px] text-neutral-300">sep 2016 - january 2020</small>
+            </div>
+            <div className="mt-7 flex justify-between">
+              <div className="flex gap-x-3">
+                <SiAdobe className="text-xl" />
+                <div className="-mt-1">
+                  <h3 className="text-sm font-medium">Jr. Creative Dev</h3>
+                  <p className="text-[9px]">Adobe</p>
+                </div>
+              </div>
+              <small className="text-[9px] text-neutral-300">sep 2016 - january 2020</small>
             </div>
           </div>
         </div>
