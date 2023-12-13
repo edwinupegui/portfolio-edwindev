@@ -4,8 +4,12 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+  background-color: #171717 !important;
+}
+
 body {
-  background-color: #171717;
+  background-color: #171717 !important;
 }
 
 .shine {
@@ -21,4 +25,26 @@ body {
 @keyframes shine {
   from { -webkit-mask-position: 150%; }
   to { -webkit-mask-position: -50%; }
+}
+
+.scrollbar::-webkit-scrollbar {
+  background-color: transparent;
+  width: 8px;
+  height: 6px;
+}
+
+.scrollbar::-webkit-scrollbar-thumb {
+  border-radius: 100px;
+  background-color: #C1C1C1;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
 }

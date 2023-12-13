@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en">
+    <html lang="en" className="no-scrollbar bg-[#171717]">
       <body className="bg-[#171717]">{children}</body>
     </html>
   )

@@ -18,11 +18,17 @@ const LeftPage = () => {
       animate={{
         y: 0,
         opacity: 1,
-        transition: { duration: 0.6, type: 'spring', stiffness: 200 },
+        transition: {
+          duration: 0.3,
+          delay: 0.5,
+          display: 0.3,
+          type: 'spring',
+          stiffness: 200,
+        },
       }}
-      className="sticky top-5 mb-10 hidden h-fit w-full rounded-2xl bg-[#1C1C1C] md:block md:w-80"
+      className="sticky top-5 ml-5 hidden h-fit w-full rounded-2xl md:block md:w-[350px]"
     >
-      <div className="h-full w-full rounded-2xl border border-neutral-800 bg-[#1C1C1C] p-3 md:w-80">
+      <div className="h-full w-full rounded-2xl border border-neutral-800 bg-[#1C1C1C] p-3 md:w-[350px]">
         <div className="flex">
           <div className="relative w-full">
             <img className="h-28 w-28 rounded-full object-cover" src="/edwin-icon-full-mini.png" alt="" />
@@ -53,7 +59,7 @@ const LeftPage = () => {
               </div>
             </div>
           </div>
-          <div className="flex h-fit w-full gap-x-1">
+          <div className="flex h-fit w-full justify-end gap-x-1">
             <Link href={'/'}>
               <div className="flex h-7 w-7 items-center justify-center rounded-full bg-neutral-700/50">
                 <PiHouseLight className="text-neutral-100" />
