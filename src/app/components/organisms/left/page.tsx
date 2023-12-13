@@ -14,9 +14,9 @@ const LeftPage = () => {
         y: 0,
         opacity: 1,
         transition: {
-          duration: 0.3,
-          delay: 0.5,
-          display: 0.3,
+          duration: 0.1,
+          delay: 0.1,
+          display: 0.1,
           type: 'spring',
           stiffness: 200,
         },

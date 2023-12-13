@@ -1,14 +1,13 @@
-/* eslint-disable tailwindcss/no-custom-classname */
 'use client'
-import React, { ReactNode, useState } from 'react'
+import React, { useState } from 'react'
 
+import Skills from '../atoms/Skills'
 import clsx from 'clsx'
 import { FaGithub } from 'react-icons/fa6'
 import { PiHouseLight } from 'react-icons/pi'
 import { Avatar, Link } from '@nextui-org/react'
 
 import useLoading from '@/app/hooks/useLoading'
-import { skills } from '@/app/mocks/userData.mock'
 
 interface IAvatarComponent {
   isMovile: boolean
@@ -23,25 +22,23 @@ const AvatarComponent = ({ isMovile }: IAvatarComponent) => {
       <div className="flex">
         <div className={clsx('relative w-full', isMovile && 'flex flex-col items-center gap-x-5')}>
           <Avatar className="h-28 w-28 rounded-full object-cover" src="/edwin-icon-full-mini.png" alt="edwin-icon" />
-          <div
-            onMouseEnter={() => setOpen(true)}
-            onMouseLeave={() => setOpen(false)}
-            className={clsx(
-              'absolute h-4 w-4 animate-pulse cursor-pointer rounded-full bg-lime-400',
-              isMovile ? 'right-[16.5rem] top-20' : 'left-24 top-20',
-            )}
-          >
-            {open && (
-              <div
-                className={clsx(
-                  'absolute flex h-5  items-center justify-center rounded-2xl border border-lime-400 px-2',
-                  isMovile ? 'left-3 top-[-0.15rem] w-20' : 'right-[-4.3rem] top-[-0.15rem] w-fit',
-                )}
-              >
-                <p className="text-[9px] font-medium text-lime-300">Open to work</p>
-              </div>
-            )}
-          </div>
+          {!isMovile && (
+            <div
+              onMouseEnter={() => setOpen(true)}
+              onMouseLeave={() => setOpen(false)}
+              className={'absolute left-24 top-20 h-4 w-4 animate-pulse cursor-pointer rounded-full bg-lime-400'}
+            >
+              {open && (
+                <div
+                  className={
+                    'absolute right-[-4.3rem] top-[-0.15rem]  flex h-5 w-fit items-center justify-center rounded-2xl border border-lime-400 px-2'
+                  }
+                >
+                  <p className="text-[9px] font-medium text-lime-300">Open to work</p>
+                </div>
+              )}
+            </div>
+          )}
           <h1 className="mt-3 text-xl font-extrabold text-neutral-300">Edwin Upegui</h1>
           {isMovile && (
             <Link
@@ -71,21 +68,7 @@ const AvatarComponent = ({ isMovile }: IAvatarComponent) => {
           </div>
         )}
       </div>
-      <div className={clsx('flex w-full', isMovile && 'justify-center')}>
-        <div className={clsx('my-4 flex flex-wrap gap-3 gap-x-1 text-xs')}>
-          {skills.map((skill, key) => (
-            <span
-              key={key}
-              className="flex h-7 shrink-0 items-center justify-center rounded-md bg-[#282828] p-2 text-[11px] font-bold text-neutral-300"
-            >
-              <div className={`avatar-color-${skill.skillColor} flex items-center justify-center gap-1`}>
-                {skill.skillIcon as ReactNode}
-                {skill.skillName}
-              </div>
-            </span>
-          ))}
-        </div>
-      </div>
+      <Skills isMovile={isMovile} />
     </div>
   )
 }

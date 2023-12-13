@@ -5,7 +5,8 @@ import Image from 'next/image'
 import Link from 'next/link'
 
 import useLoading from './hooks/useLoading'
-import { PiGithubLogoLight, PiHouseLight } from 'react-icons/pi'
+import { FaGithub } from 'react-icons/fa6'
+import { PiHouseLight } from 'react-icons/pi'
 
 export default function Home() {
   const { loading, setLoading } = useLoading()
@@ -57,11 +58,11 @@ export default function Home() {
                 </span>
               </Link>
 
-              <span>
-                <Link target="_blank" href="https://github.com/edwinupegui">
-                  <PiGithubLogoLight className="text-4xl" />
-                </Link>
-              </span>
+              <Link target="_blank" href="https://github.com/edwinupegui">
+                <span>
+                  <FaGithub className="text-4xl" />
+                </span>
+              </Link>
             </div>
           </div>
         </div>

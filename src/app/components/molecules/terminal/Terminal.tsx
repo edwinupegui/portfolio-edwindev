@@ -1,11 +1,18 @@
+'use client'
+
 import React, { ReactNode, useEffect, useState } from 'react'
+import { useRouter } from 'next/navigation'
 
 import { motion } from 'framer-motion'
 import { FaTerminal } from 'react-icons/fa6'
 import Terminal, { ColorMode, TerminalOutput } from 'react-terminal-ui'
 import { Accordion, AccordionItem } from '@nextui-org/react'
 
+import useTerminal from '@/app/hooks/useTerminal'
+
 const TerminalModule = () => {
+  const { setInputTerminal } = useTerminal()
+  const router = useRouter()
   const [terminalLineData, setTerminalLineData] = useState<ReactNode[]>([])
   const [terminalInput, setTerminalInput] = useState('')
   const [height, setHeight] = useState('100px')
@@ -21,12 +28,34 @@ const TerminalModule = () => {
   }
 
   useEffect(() => {
-    if (terminalInput === 'help') {
-      setHeight('120px')
-      setTerminalLineData([<TerminalOutput key={1}>ayudas</TerminalOutput>])
-    } else {
-      setHeight('100px')
-      setTerminalLineData([])
+    switch (terminalInput.toLowerCase()) {
+      case 'help':
+        setHeight('120px')
+        setTerminalLineData([<TerminalOutput key={1}>back | projects</TerminalOutput>])
+        break
+      case 'back':
+        router.back()
+        setHeight('100px')
+        setTerminalLineData([])
+        break
+      case 'all':
+        setInputTerminal('all')
+        setHeight('100px')
+        setTerminalLineData([])
+        break
+      case 'projects':
+        setInputTerminal('projects')
+        setHeight('100px')
+        setTerminalLineData([])
+        break
+      case 'my-info':
+        setInputTerminal('my-info')
+        setHeight('100px')
+        setTerminalLineData([])
+        break
+      default:
+        setHeight('100px')
+        setTerminalLineData([])
     }
   }, [terminalInput])
 
@@ -37,9 +66,9 @@ const TerminalModule = () => {
         y: 0,
         opacity: 1,
         transition: {
-          duration: 0.6,
-          delay: 1,
-          display: 0.6,
+          duration: 0.3,
+          delay: 0.3,
+          display: 0.3,
           type: 'spring',
           stiffness: 200,
         },
@@ -70,7 +99,7 @@ const TerminalModule = () => {
                   {terminalLine}
                   {terminalLineData && terminalLineData.length > 0 && (
                     <div className="flex flex-col gap-y-2">
-                      {`$ ${terminalInput}`}
+                      {`$ ${terminalInput.toLowerCase()}`}
                       {terminalLineData}
                     </div>
                   )}
