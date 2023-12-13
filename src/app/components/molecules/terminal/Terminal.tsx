@@ -13,7 +13,7 @@ const TerminalModule = () => {
   const terminalLine = [<TerminalOutput key={1}>EdwinDev@edwindev ~</TerminalOutput>]
 
   const itemClasses = {
-    base: 'py-0 w-full md:w-[600px]',
+    base: 'py-0 w-full lg:w-[600px]',
     title: 'font-normal text-medium text-neutral-200',
     trigger: 'p-2 rounded-lg h-8 flex items-center',
     indicator: 'text-medium',
@@ -44,7 +44,7 @@ const TerminalModule = () => {
           stiffness: 200,
         },
       }}
-      className="sticky top-5 h-fit w-full rounded-2xl md:w-[600px]"
+      className="sticky top-5 z-10 h-fit w-full rounded-2xl lg:w-[600px]"
     >
       <div className="h-fit w-full rounded-xl">
         <Accordion

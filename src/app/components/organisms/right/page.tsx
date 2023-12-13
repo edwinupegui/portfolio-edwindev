@@ -6,7 +6,7 @@ import { motion, useAnimation } from 'framer-motion'
 import { PiGithubLogoLight } from 'react-icons/pi'
 import { SiCss3, SiFramer } from 'react-icons/si'
 
-function RightPage() {
+const RightPage = () => {
   const controls = useAnimation()
 
   return (
@@ -23,9 +23,9 @@ function RightPage() {
           stiffness: 200,
         },
       }}
-      className="sticky top-5 mr-10 hidden h-fit w-full rounded-2xl lg:block lg:w-[250px]"
+      className="sticky top-5 mr-10 hidden h-fit w-full rounded-2xl xl:block xl:w-[250px]"
     >
-      <div className="h-full w-full rounded-2xl lg:w-[250px]">
+      <div className="h-full w-full rounded-2xl xl:w-[250px]">
         <div className="flex flex-col gap-y-3">
           <div className="min-w-min rounded-2xl border border-neutral-800 bg-[#1c1c1c] p-4 text-neutral-200">
             <h2 className="font-bold text-neutral-200">90+ Framer Shadows</h2>

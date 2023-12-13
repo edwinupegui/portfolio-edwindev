@@ -1,0 +1,16 @@
+.avatar-color-react {
+  @apply text-[#149eca]
+}
+
+.avatar-color-node {
+  @apply text-[#026e00]
+}
+
+.avatar-color-git {
+  @apply text-[#f44d27]
+}
+
+.avatar-color-framer {
+  @apply text-[#ed3ab5]
+}
+
