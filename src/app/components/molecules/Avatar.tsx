@@ -1,10 +1,12 @@
 'use client'
 import React, { useState } from 'react'
+import { useRouter } from 'next/navigation'
 
 import Skills from '../atoms/Skills'
 import clsx from 'clsx'
 import { FaGithub } from 'react-icons/fa6'
-import { PiHouseLight } from 'react-icons/pi'
+import { FaHouse } from 'react-icons/fa6'
+import { IoArrowBack } from 'react-icons/io5'
 import { Avatar, Link } from '@nextui-org/react'
 
 import useLoading from '@/app/hooks/useLoading'
@@ -15,6 +17,7 @@ interface IAvatarComponent {
 
 const AvatarComponent = ({ isMovile }: IAvatarComponent) => {
   const { setLoading } = useLoading()
+  const router = useRouter()
   const [open, setOpen] = useState(false)
 
   return (
@@ -55,16 +58,17 @@ const AvatarComponent = ({ isMovile }: IAvatarComponent) => {
             <Link href={'/'}>
               <div
                 onClick={() => setLoading(false)}
-                className="flex h-7 w-7 items-center justify-center rounded-full bg-neutral-700/50"
+                className="flex h-10 w-10 items-center justify-center rounded-full bg-neutral-700/50"
               >
-                <PiHouseLight className="text-neutral-100" />
+                <FaHouse className="text-[18px] text-neutral-100" />
               </div>
             </Link>
-            <Link href="https://github.com/edwinupegui" isExternal>
-              <div className="flex h-7 w-7 items-center justify-center rounded-full bg-neutral-700/50">
-                <FaGithub className="text-neutral-100" />
-              </div>
-            </Link>
+            <div
+              onClick={() => router.back()}
+              className="flex h-10 w-10 cursor-pointer items-center justify-center rounded-full bg-neutral-700/50"
+            >
+              <IoArrowBack className="text-xl text-neutral-100" />
+            </div>
           </div>
         )}
       </div>

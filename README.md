@@ -42,4 +42,5 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 - work with me section.
 - study history section.
 - blog history section.
+- Downloand cv.
 
