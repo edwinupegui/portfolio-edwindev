@@ -5,6 +5,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 
 import useLoading from './hooks/useLoading'
+import { motion } from 'framer-motion'
 import { FaGithub } from 'react-icons/fa6'
 import { PiHouseLight } from 'react-icons/pi'
 
@@ -32,40 +33,55 @@ export default function Home() {
           </div>
         </div>
       ) : (
-        <div>
-          <div className="fixed top-28 mx-auto flex w-full flex-col items-center justify-center p-5">
-            <div className="rounded-full bg-neutral-600">
-              <Image
-                width={200}
-                height={200}
-                className="w-fit rounded-full object-cover"
-                src="/edwin-icon-full.png"
-                alt="Pixel Art EdwinDev"
-              />
+        <motion.div
+          initial={{ y: 30, opacity: 0 }}
+          animate={{
+            y: 0,
+            opacity: 1,
+            transition: {
+              duration: 0.1,
+              delay: 0.1,
+              display: 0.1,
+              type: 'spring',
+              stiffness: 200,
+            },
+          }}
+        >
+          <div className="mb-32 md:mb-0">
+            <div className="top-28 mx-auto flex w-full flex-col items-center justify-center p-5 md:fixed">
+              <div className="rounded-full bg-neutral-600">
+                <Image
+                  width={200}
+                  height={200}
+                  className="w-fit rounded-full object-cover"
+                  src="/edwin-icon-full.png"
+                  alt="Pixel Art EdwinDev"
+                />
+              </div>
+              <h1 className="shine my-9 text-center text-6xl font-extrabold">EdwinDev Portfolio</h1>
+              <p className="text-center font-normal text-neutral-400 lg:max-w-lg">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt, autem deleniti itaque non vitae at
+                facilis aperiam sunt provident magnam esse aut, a perferendis neque quo doloribus molestiae laboriosam
+                illo.
+              </p>
             </div>
-            <h1 className="shine my-9 text-center text-6xl font-extrabold">EdwinDev Portfolio</h1>
-            <p className="text-center font-normal text-neutral-400 lg:max-w-lg">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt, autem deleniti itaque non vitae at
-              facilis aperiam sunt provident magnam esse aut, a perferendis neque quo doloribus molestiae laboriosam
-              illo.
-            </p>
-          </div>
-          <div className="flex justify-center">
-            <div className="fixed bottom-7 flex gap-x-5 rounded-lg border border-neutral-600 p-2 text-neutral-500">
-              <Link href={'/dashboard'}>
-                <span onClick={() => setLoading(true)}>
-                  <PiHouseLight className="text-4xl" />
-                </span>
-              </Link>
+            <div className="flex justify-center">
+              <div className="fixed bottom-7 flex gap-x-5 rounded-lg border border-neutral-600 p-2 text-neutral-500">
+                <Link href={'/dashboard'}>
+                  <span onClick={() => setLoading(true)}>
+                    <PiHouseLight className="text-4xl" />
+                  </span>
+                </Link>
 
-              <Link target="_blank" href="https://github.com/edwinupegui">
-                <span>
-                  <FaGithub className="text-4xl" />
-                </span>
-              </Link>
+                <Link target="_blank" href="https://github.com/edwinupegui">
+                  <span>
+                    <FaGithub className="text-4xl" />
+                  </span>
+                </Link>
+              </div>
             </div>
           </div>
-        </div>
+        </motion.div>
       )}
     </main>
   )

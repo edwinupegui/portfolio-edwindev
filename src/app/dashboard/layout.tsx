@@ -18,7 +18,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         >
           <NextUIProvider>
             <div className="mx-auto w-full lg:max-w-[90rem]">
-              <div className="mb-10 mt-5 flex flex-col gap-4 px-5 lg:flex-row">
+              <div className="mb-10 mt-5 flex flex-col gap-4 pl-5 lg:flex-row">
                 <LeftPage />
                 {children}
                 <RightPage />
