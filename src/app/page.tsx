@@ -51,8 +51,8 @@ export default function Home() {
             <div className="top-28 mx-auto flex w-full flex-col items-center justify-center p-5 md:fixed">
               <div className="rounded-full bg-neutral-600">
                 <Image
-                  width={200}
-                  height={200}
+                  width={150}
+                  height={150}
                   className="w-fit rounded-full object-cover"
                   src="/edwin-icon-full.png"
                   alt="Pixel Art EdwinDev"

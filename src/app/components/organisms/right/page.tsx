@@ -56,7 +56,7 @@ const RightPage = () => {
           stiffness: 200,
         },
       }}
-      className="sticky top-5 mr-10 hidden h-fit w-full rounded-2xl xl:block xl:w-[250px]"
+      className="sticky top-5 hidden h-fit w-full rounded-2xl xl:block xl:w-[250px]"
     >
       <div className="h-full w-full rounded-2xl xl:w-[250px]">
         <div className="flex flex-col gap-y-3">
