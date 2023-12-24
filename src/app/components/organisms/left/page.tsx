@@ -21,7 +21,7 @@ const LeftPage = () => {
           stiffness: 200,
         },
       }}
-      className="sticky top-5 ml-5 hidden h-fit w-full rounded-2xl lg:block lg:w-[350px]"
+      className="sticky top-5 hidden h-fit w-full rounded-2xl lg:block lg:w-[350px]"
     >
       <div className="h-full w-full rounded-2xl border border-neutral-800 bg-[#1C1C1C] p-3 lg:w-[350px]">
         <div className="flex">
