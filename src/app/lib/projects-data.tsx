@@ -16,20 +16,20 @@ export interface Links {
 export const projects: Project[] = [
   {
     projectId: 1,
-    projectTitle: `Development Project 1`,
-    projectDate: `sep 2016 - january 2020`,
+    projectTitle: `Shared Canvas`,
+    projectDate: `dic 2023 - jan 2024`,
     projectImage: '/edwin-icon-full-volumen.png',
     projectDescription: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius quidem eaque omnis fugiat. Quos deserunt ea
     totam odio mollitia, maiores nulla praesentium in, quo ut expedita voluptate nihil fugiat nam.`,
     links: [
       {
         icon: 'FaGithub',
-        url: 'https://github.com/edwinupegui',
+        url: 'https://github.com/edwinupegui/shared-canvas',
         iconContent: 'Source Code',
       },
       {
         icon: 'BsPlayCircleFill',
-        url: 'https://github.com/edwinupegui',
+        url: 'https://shared-canvas-edwindev.onrender.com/',
         iconContent: 'Live Demo',
       },
     ],
