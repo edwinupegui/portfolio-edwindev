@@ -16,7 +16,7 @@ export interface Links {
 export const projects: Project[] = [
   {
     projectId: 1,
-    projectTitle: `Shared Canvas test`,
+    projectTitle: `Shared Canvas test2`,
     projectDate: `dic 2023 - jan 2024`,
     projectImage: '/edwin-icon-full-volumen.png',
     projectDescription: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius quidem eaque omnis fugiat. Quos deserunt ea
