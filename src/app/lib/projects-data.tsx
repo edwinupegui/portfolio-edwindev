@@ -17,7 +17,7 @@ export const projects: Project[] = [
   {
     projectId: 1,
     projectTitle: `Shared Canvas test`,
-    projectDate: `dic 2023 - jan 2024`,
+    projectDate: `enero 2023 - jan 2024`,
     projectImage: '/edwin-icon-full-volumen.png',
     projectDescription: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius quidem eaque omnis fugiat. Quos deserunt ea
     totam odio mollitia, maiores nulla praesentium in, quo ut expedita voluptate nihil fugiat nam.`,
