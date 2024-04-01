@@ -17,7 +17,7 @@ const Projects = () => {
       <div className="flex flex-col">
         {projects &&
           projects.length > 0 &&
-          projects.map(({ projectDate, projectImage, projectTitle, projectId }: Project, key: number) => (
+          projects.map(({ projectDate, projectImage, projectTitle, projectId, technologies }: Project, key: number) => (
             <div key={key}>
               <Link href={`/dashboard/${projectId}`}>
                 <div className="m-2 flex cursor-pointer rounded-2xl py-3 hover:bg-neutral-800">
@@ -36,7 +36,7 @@ const Projects = () => {
                       <small className="text-[9px] text-neutral-300">{projectDate}</small>
                     </div>
                     <div>
-                      <Skills isProject={true} />
+                      <Skills isProject={true} technologies={technologies} />
                     </div>
                   </div>
                 </div>

@@ -5,6 +5,7 @@ export interface Project {
   projectImage: string
   projectDescription: string
   links: Links[]
+  technologies: string[]
 }
 
 export interface Links {
@@ -16,11 +17,10 @@ export interface Links {
 export const projects: Project[] = [
   {
     projectId: 1,
-    projectTitle: `Shared Canvas test`,
-    projectDate: `enero 2023 - jan 2024`,
-    projectImage: '/edwin-icon-full-volumen.png',
-    projectDescription: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius quidem eaque omnis fugiat. Quos deserunt ea
-    totam odio mollitia, maiores nulla praesentium in, quo ut expedita voluptate nihil fugiat nam.`,
+    projectTitle: `Shared Canvas`,
+    projectDate: `Diciembre 2023`,
+    projectImage: '/projects/project-1.png',
+    projectDescription: `Shared Canvas es un proyecto full-stack desarrollado con tecnologías JavaScript. Su objetivo es ofrecer una experiencia de lienzo compartido en tiempo real, permitiendo a los usuarios crear o unirse a salas para colaborar con amigos. Dentro de estas salas, los usuarios pueden chatear, dibujar y compartir imágenes de forma fluida, fomentando un entorno dinámico e interactivo.`,
     links: [
       {
         icon: 'FaGithub',
@@ -29,69 +29,10 @@ export const projects: Project[] = [
       },
       {
         icon: 'BsPlayCircleFill',
-        url: 'https://shared-canvas-edwindev.onrender.com/',
+        url: 'https://shared-canvas.onrender.com/',
         iconContent: 'Live Demo',
       },
     ],
-  },
-  {
-    projectId: 2,
-    projectTitle: `Development Project 2`,
-    projectDate: `sep 2016 - january 2020`,
-    projectImage: '/edwin-icon-full-hd.png',
-    projectDescription: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius quidem eaque omnis fugiat. Quos deserunt ea
-    totam odio mollitia, maiores nulla praesentium in, quo ut expedita voluptate nihil fugiat nam.`,
-    links: [
-      {
-        icon: 'FaGithub',
-        url: 'https://github.com/edwinupegui',
-        iconContent: 'Source Code',
-      },
-      {
-        icon: 'BsPlayCircleFill',
-        url: 'https://github.com/edwinupegui',
-        iconContent: 'Live Demo',
-      },
-    ],
-  },
-  {
-    projectId: 3,
-    projectTitle: `Development Project 3`,
-    projectDate: `sep 2016 - january 2020`,
-    projectImage: '/edwin-icon-full-anime.png',
-    projectDescription: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius quidem eaque omnis fugiat. Quos deserunt ea
-    totam odio mollitia, maiores nulla praesentium in, quo ut expedita voluptate nihil fugiat nam.`,
-    links: [
-      {
-        icon: 'FaGithub',
-        url: 'https://github.com/edwinupegui',
-        iconContent: 'Source Code',
-      },
-      {
-        icon: 'BsPlayCircleFill',
-        url: 'https://github.com/edwinupegui',
-        iconContent: 'Live Demo',
-      },
-    ],
-  },
-  {
-    projectId: 4,
-    projectTitle: `Development Project 4`,
-    projectDate: `sep 2016 - january 2020`,
-    projectImage: '/edwin-icon-full-pixel-art-2.png',
-    projectDescription: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius quidem eaque omnis fugiat. Quos deserunt ea
-    totam odio mollitia, maiores nulla praesentium in, quo ut expedita voluptate nihil fugiat nam.`,
-    links: [
-      {
-        icon: 'FaGithub',
-        url: 'https://github.com/edwinupegui',
-        iconContent: 'Source Code',
-      },
-      {
-        icon: 'BsPlayCircleFill',
-        url: 'https://github.com/edwinupegui',
-        iconContent: 'Live Demo',
-      },
-    ],
+    technologies: ['TypeScript', 'React.js', 'Next.js', 'Taildwind CSS', 'Framer Motion', 'NodeJS', 'Express.js'],
   },
 ]

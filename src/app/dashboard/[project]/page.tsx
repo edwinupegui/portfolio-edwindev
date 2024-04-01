@@ -44,10 +44,12 @@ const ProjectPage = ({ params }: Page) => {
       <div className="flex h-auto w-full flex-col items-center justify-center rounded-2xl border border-neutral-800 bg-[#1C1C1C] lg:w-[634px]">
         {project &&
           project.length > 0 &&
-          project.map(({ links, projectDescription, projectImage, projectTitle, projectId }: Project) => (
+          project.map(({ links, projectDescription, projectImage, projectTitle, projectId, technologies }: Project) => (
             <div key={projectId} className="flex flex-col items-center justify-center gap-2 py-2">
               <h2 className="text-xl font-bold text-neutral-200">{projectTitle}</h2>
-              <Skills isProject={true} />
+              <div className="px-10">
+                <Skills isProject={true} technologies={technologies} />
+              </div>
               <div className="rounded-md px-5 py-3">
                 <Image
                   width={300}

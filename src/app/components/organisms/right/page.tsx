@@ -1,11 +1,12 @@
 'use client'
 
 import React from 'react'
+import Link from 'next/dist/client/link'
 
 import { motion, useAnimation } from 'framer-motion'
-import { FaListCheck } from 'react-icons/fa6'
-import { PiGithubLogoLight } from 'react-icons/pi'
-import { SiCss3, SiFramer } from 'react-icons/si'
+import { FaLinkedin } from 'react-icons/fa'
+import { FaGithub, FaListCheck } from 'react-icons/fa6'
+import { SiPlatzi } from 'react-icons/si'
 import { Accordion, AccordionItem } from '@nextui-org/react'
 
 const RightPage = () => {
@@ -83,51 +84,43 @@ const RightPage = () => {
             </AccordionItem>
           </Accordion>
           <div className="mt-2 min-w-min rounded-2xl border border-neutral-800 bg-[#1c1c1c] p-4 text-neutral-200">
-            <h2 className="font-bold text-neutral-200">90+ Framer Shadows</h2>
+            <h2 className="font-bold text-neutral-200">Descarga mi CV</h2>
             <p className="my-3 text-xs font-normal text-neutral-200">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem itaque quasi soluta reprehenderit
-              perferendis rem tempore.
+              ¡Hola! Soy un apasionado desarrollador de software en busca de nuevos desafíos. Tengo experiencia en
+              JavaScript, TypeScript, Node.js, React y más. ¡Descarga mi hoja de vida y descubre cómo puedo ser un gran
+              aporte para tu equipo!
             </p>
-            <button className="h-7 w-full rounded-md bg-[#696969] p-1 text-xs font-medium ">
-              <p className="text-neutral-50">Download</p>
-            </button>
+            <motion.button animate={controls} className="h-7 w-full rounded-md bg-[#696969] p-1 text-xs font-medium">
+              <a download>Descargar CV</a>
+            </motion.button>
             <div className="my-5 border border-neutral-700"></div>
             <div className="flex flex-col gap-3 text-neutral-400">
-              <h1 className="font-medium text-neutral-200">Featured in</h1>
-              <div className="flex items-center gap-x-3 rounded-md p-2 hover:bg-neutral-800">
-                <div className="flex h-8 w-8 items-center justify-center rounded-full bg-neutral-700/50">
-                  <PiGithubLogoLight className="text-lg" />
+              <h1 className="font-medium text-neutral-200">Mis Redes</h1>
+              <Link target="_blank" href="https://github.com/edwinupegui">
+                <div className="flex items-center gap-x-3 rounded-md p-2 hover:bg-neutral-800">
+                  <div className="flex h-8 w-8 items-center justify-center rounded-full bg-neutral-700/50">
+                    <FaGithub className="text-lg" />
+                  </div>
+                  <h3 className="text-xs">GitHub</h3>
                 </div>
-                <h3 className="text-xs">
-                  9 Essentials JavaScript <br /> Functions
-                </h3>
-              </div>
-              <div className="flex items-center gap-x-3 rounded-md p-2 hover:bg-neutral-800">
-                <div className="flex h-8 w-8 items-center justify-center rounded-full bg-neutral-700/50">
-                  <SiFramer className="text-lg" />
+              </Link>
+              <Link target="_blank" href="https://www.linkedin.com/in/edwin-arley-upegui-vergara-527656202/">
+                <div className="flex items-center gap-x-3 rounded-md p-2 hover:bg-neutral-800">
+                  <div className="flex h-8 w-8 items-center justify-center rounded-full bg-neutral-700/50">
+                    <FaLinkedin className="text-lg" />
+                  </div>
+                  <h3 className="text-xs">Linkedin</h3>
                 </div>
-                <h3 className="text-xs">
-                  How to easily creat React <br /> animations: Framer Motion
-                </h3>
-              </div>
-              <div className="flex items-center gap-x-3 rounded-md p-2 hover:bg-neutral-800">
-                <div className="flex h-8 w-8 items-center justify-center rounded-full bg-neutral-700/50">
-                  <SiCss3 className="text-lg" />
-                </div>
-                <h3 className="text-xs">TailwindCSS tips</h3>
-              </div>
+              </Link>
             </div>
           </div>
-          <div className="min-w-min rounded-2xl border border-neutral-800 bg-[#1c1c1c] p-4 text-neutral-200">
-            <h2 className="font-bold text-neutral-200">90+ Framer Shadows</h2>
-            <p className="my-3 text-xs font-normal text-neutral-200">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem itaque quasi soluta reprehenderit
-              perferendis rem tempore, cumque nisi. At, totam. Alias pariatur ipsa suscipit fugiat veritatis eius eos a
-              nulla.
-            </p>
-            <motion.button animate={controls} className="h-7 w-full rounded-md bg-[#696969] p-1 text-xs font-medium ">
-              <p className="text-neutral-50">Download</p>
-            </motion.button>
+          <div className="flex min-w-min flex-col items-center justify-center gap-5 rounded-2xl border border-neutral-800 bg-[#1c1c1c] p-4 text-neutral-200">
+            <h2 className="font-bold text-neutral-200">Mis cursos certificados</h2>
+            <Link target="_blank" href="https://platzi.com/p/EdwinUpegui/">
+              <div className="flex h-14 w-14 cursor-pointer items-center justify-center rounded-full bg-neutral-700/50">
+                <SiPlatzi className="text-4xl hover:text-[#98ca3f]" />
+              </div>
+            </Link>
           </div>
         </div>
       </div>

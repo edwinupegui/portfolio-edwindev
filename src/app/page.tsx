@@ -58,11 +58,13 @@ export default function Home() {
                   alt="Pixel Art EdwinDev"
                 />
               </div>
-              <h1 className="shine my-9 text-center text-6xl font-extrabold">EdwinDev Portfolio</h1>
-              <p className="text-center font-normal text-neutral-400 lg:max-w-lg">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt, autem deleniti itaque non vitae at
-                facilis aperiam sunt provident magnam esse aut, a perferendis neque quo doloribus molestiae laboriosam
-                illo.
+              <h1 className="shine my-9 text-center text-6xl font-extrabold">EdwinDev Portafolio</h1>
+              <p className="text-center font-normal text-neutral-400 lg:max-w-xl">
+                Soy un apasionado desarrollador de software con especialización en tecnologías JavaScript, incluyendo
+                TypeScript, Node.js, React, React Native, Next.js, Express.js y NestJS. Además, tengo experiencia en
+                Dart, Flutter, PostgreSQL, GraphQL y MongoDB. Siempre estoy buscando nuevos desafíos y oportunidades de
+                aprendizaje en el mundo de la programación, y estoy comprometido con el desarrollo de soluciones
+                innovadoras y de alta calidad.
               </p>
             </div>
             <div className="flex justify-center">

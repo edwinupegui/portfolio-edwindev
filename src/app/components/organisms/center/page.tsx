@@ -29,7 +29,7 @@ const CenterPage = () => {
               <div className="my-2 border border-[#282828] text-neutral-300"></div>
             </div>
             <Projects />
-            <div className="h-full w-full rounded-2xl border border-neutral-800 bg-[#1C1C1C]">bottom</div>
+            {/* <div className="h-full w-full rounded-2xl border border-neutral-800 bg-[#1C1C1C]">bottom</div> */}
           </>,
         )
         break
@@ -68,7 +68,7 @@ const CenterPage = () => {
               <div className="my-2 border border-[#282828] text-neutral-300"></div>
             </div>
             <Projects />
-            <div className="h-full w-full rounded-2xl border border-neutral-800 bg-[#1C1C1C]">bottom</div>
+            {/* <div className="h-full w-full rounded-2xl border border-neutral-800 bg-[#1C1C1C]">bottom</div> */}
           </>,
         )
     }

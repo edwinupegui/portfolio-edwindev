@@ -1,5 +1,37 @@
+.avatar-color-html {
+  @apply text-[#FF5733]
+}
+
+.avatar-color-css {
+  @apply text-[#264de4]
+}
+
+.avatar-color-javascript {
+  @apply text-[#F0DB4F]
+}
+
+.avatar-color-typescript {
+  @apply text-[#007acc]
+}
+
+.avatar-color-dart {
+  @apply text-[#0553B1]
+}
+
 .avatar-color-react {
   @apply text-[#149eca]
+}
+
+.avatar-color-nextjs {
+  @apply text-[#fff]
+}
+
+.avatar-color-taildwind {
+  @apply text-[#a5f3fc]
+}
+
+.avatar-color-flutter {
+  @apply text-[#0553B1]
 }
 
 .avatar-color-node {
@@ -14,3 +46,10 @@
   @apply text-[#ed3ab5]
 }
 
+.avatar-color-express {
+  @apply text-[#fff]
+}
+
+.avatar-color-nestjs {
+  @apply text-[#ea2845]
+}
